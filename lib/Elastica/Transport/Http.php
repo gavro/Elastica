@@ -131,7 +131,7 @@ class Http extends AbstractTransport
             }
 
             if (is_array($data)) {
-                $content = JSON::stringify($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+                $content = JSON::stringify($data, JSON_INVALID_UTF8_IGNORE | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
             } else {
                 $content = $data;
 
